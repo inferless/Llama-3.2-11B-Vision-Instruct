@@ -27,11 +27,15 @@ To access the custom runtime window in Inferless, simply navigate to the sidebar
 Next, provide a suitable name for your custom runtime and proceed by uploading the inferless-runtime-config.yaml file given above. Finally, ensure you save your changes by clicking on the save button.
 
 ### Import the Model in Inferless
-Log in to your inferless account, select the workspace you want the model to be imported into and click the Add Model button.
+Log in to your inferless account, select the workspace you want the model to be imported into and click the `Add a custom model` button.
 
-Select the PyTorch as framework and choose **Repo(custom code)** as your model source and select your provider, and use the forked repo URL as the **Model URL**.
+- Select `Github` as the method of upload from the Provider list and then select your Github Repository and the branch.
+- Choose the type of machine, and specify the minimum and maximum number of replicas for deploying your model.
+- Configure Custom Runtime ( If you have pip or apt packages), choose Volume, Secrets and set Environment variables like Inference Timeout / Container Concurrency / Scale Down Timeout
+- Once you click “Continue,” click Deploy to start the model import process.
+  
+Refer [this link](https://docs.inferless.com/integrations/git-custom-code/git--custom-code) for more information on model import.
 
-Enter all the required details to Import your model. Refer [this link](https://docs.inferless.com/integrations/github-custom-code) for more information on model import.
 
 ---
 ## Customizing the Code
