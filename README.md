@@ -1,9 +1,9 @@
 # Tutorial - Deploy Llama-3.2-11B-Vision-Instruct using Inferless
-LLama
+The Llama 3.2 11B Vision Instruct model is part of Meta's latest series of large language models that introduce significant advancements in multimodal AI capabilities, allowing for both text and image inputs.
 
 ## TL;DR:
 - Deployment of Llama-3.2-11B-Vision-Instruct model using [Transformers](https://github.com/huggingface/transformers).
-- You can expect an average latency of ` sec`. This setup has an average cold start time of `7.82 sec`.
+- You can expect an average latency of `2.44 sec`. This setup has an average cold start time of `10.60 sec`.
 - Dependencies defined in `inferless-runtime-config.yaml`.
 - GitHub/GitLab template creation with `app.py`, `inferless-runtime-config.yaml` and `inferless.yaml`.
 - Model class in `app.py` with `initialize`, `infer`, and `finalize` functions.
@@ -19,7 +19,7 @@ Get started by forking the repository. You can do this by clicking on the fork b
 This will create a copy of the repository in your own GitHub account, allowing you to make changes and customize it according to your needs.
 
 ### Add Your Hugging Face Auth Token
-Go into the `app.py` and replace `<your_token>` with your hugging face api key. Make sure to check the repo is private to protect your hugging face key.
+Go into the `inferless.yaml` and replace `<YOUR_HUGGINGFACE_ACCESS_TOKEN>` with your hugging face api key. Make sure to check the repo is private to protect your hugging face key.
 
 ### Create a Custom Runtime in Inferless
 To access the custom runtime window in Inferless, simply navigate to the sidebar and click on the Create new Runtime button. A pop-up will appear.
