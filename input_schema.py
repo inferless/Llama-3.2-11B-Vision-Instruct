@@ -5,7 +5,7 @@ INPUT_SCHEMA = {
         'shape': [1],
         'example': ["Describe this image?"]
     },
-    "url": {
+    "image_url": {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
