@@ -33,7 +33,7 @@ class InferlessPythonModel:
         image = Image.open(requests.get(image_url, stream=True).raw)
         inputs = self.processor(image, input_text, return_tensors="pt").to(self.model.device)
         
-        output = self.model.generate(**inputs, max_new_tokens=30)
+        output = self.model.generate(**inputs, max_new_tokens=max_new_tokens)
         output_text = self.processor.decode(output[0],skip_special_tokens=True)
         
         return {"generated_text":output_text}
