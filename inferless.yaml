@@ -1,6 +1,6 @@
 version: 1.0.0
 
-name: Llama-3-2-11B-Vision-Instruct
+name: llama-3.2-11b-vision-instruct
 import_source: GIT
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
@@ -41,6 +41,6 @@ optional:
   input_file_name: input.json
   output_file_name: output.json
   runtime_file_name: inferless-runtime-config.yaml
-model_url: https://github.com/inferless/Llama-3.2-11B-Vision-Instruct.git
+model_url: https://github.com/inferless/llama-3.2-11b-vision-instruct.git
 provider: GITHUB
 io_schema: true
