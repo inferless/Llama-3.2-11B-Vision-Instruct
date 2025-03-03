@@ -1,3 +1,6 @@
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 import requests
 import torch
 from PIL import Image
@@ -6,6 +9,7 @@ from transformers import MllamaForConditionalGeneration, AutoProcessor
 class InferlessPythonModel:
     def initialize(self):
         model_id = "meta-llama/Llama-3.2-11B-Vision-Instruct"
+        snapshot_download(repo_id=model_id,allow_patterns=["*.safetensors"])
         self.model = MllamaForConditionalGeneration.from_pretrained(
             model_id,
             torch_dtype=torch.bfloat16,
